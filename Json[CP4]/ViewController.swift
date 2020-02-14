@@ -11,7 +11,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         self.title = "센텀_맛집"
-        
         let pathA = Bundle.main.path(forResource: "MyColors", ofType: "json")
         let dataA = try! NSData(contentsOfFile: pathA!) as Data
         self.dicA = try! JSONSerialization.jsonObject(with: dataA, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[String]]
