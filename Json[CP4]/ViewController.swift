@@ -1,25 +1,42 @@
-//
-//  ViewController.swift
-//  Json[CP4]
-//
-//  Created by iMac on 2018. 9. 9..
-//  Copyright © 2018년 recursivesoft. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var myTable: UITableView!
+    var dicA: [String:[String]]!
+    var keys: [String]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.title = "센텀_맛집"
+        
+        let pathA = Bundle.main.path(forResource: "MyColors", ofType: "json")
+        let dataA = try! NSData(contentsOfFile: pathA!) as Data
+        self.dicA = try! JSONSerialization.jsonObject(with: dataA, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String:[String]]
+        keys = dicA.keys.sorted()
+        self.myTable.delegate = self
+        self.myTable.dataSource = self
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {         //행을 클릭했을때 실행되는 함수이다.
+        let secVC: JiWonVC = JiWonVC()
+        secVC.dicA = dicA
+        secVC.row = indexPath.row
+        secVC.keys = keys
+        self.navigationController?.pushViewController(secVC, animated: true)
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dicA.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.myTable.dequeueReusableCell(withIdentifier: "cellA", for: indexPath)
+        cell.textLabel?.text = self.keys[indexPath.row]
+        return cell
+    }
+    
 }
-

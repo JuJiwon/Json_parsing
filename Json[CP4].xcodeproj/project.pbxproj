@@ -12,6 +12,8 @@
 		88DDDF68214517CD00827B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DDDF66214517CD00827B68 /* Main.storyboard */; };
 		88DDDF6A214517CD00827B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88DDDF69214517CD00827B68 /* Assets.xcassets */; };
 		88DDDF6D214517CD00827B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88DDDF6B214517CD00827B68 /* LaunchScreen.storyboard */; };
+		88F3F3592145186D00988714 /* MyColors.json in Resources */ = {isa = PBXBuildFile; fileRef = 88F3F3582145186D00988714 /* MyColors.json */; };
+		88F3F35B21451A7B00988714 /* JiWonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3F35A21451A7B00988714 /* JiWonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		88DDDF69214517CD00827B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88DDDF6C214517CD00827B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88DDDF6E214517CD00827B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88F3F3582145186D00988714 /* MyColors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyColors.json; sourceTree = "<group>"; };
+		88F3F35A21451A7B00988714 /* JiWonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiWonVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				88DDDF62214517CD00827B68 /* AppDelegate.swift */,
 				88DDDF64214517CD00827B68 /* ViewController.swift */,
+				88F3F35A21451A7B00988714 /* JiWonVC.swift */,
+				88F3F3582145186D00988714 /* MyColors.json */,
 				88DDDF66214517CD00827B68 /* Main.storyboard */,
 				88DDDF69214517CD00827B68 /* Assets.xcassets */,
 				88DDDF6B214517CD00827B68 /* LaunchScreen.storyboard */,
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88DDDF6D214517CD00827B68 /* LaunchScreen.storyboard in Resources */,
+				88F3F3592145186D00988714 /* MyColors.json in Resources */,
 				88DDDF6A214517CD00827B68 /* Assets.xcassets in Resources */,
 				88DDDF68214517CD00827B68 /* Main.storyboard in Resources */,
 			);
@@ -137,6 +144,7 @@
 			files = (
 				88DDDF65214517CD00827B68 /* ViewController.swift in Sources */,
 				88DDDF63214517CD00827B68 /* AppDelegate.swift in Sources */,
+				88F3F35B21451A7B00988714 /* JiWonVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
